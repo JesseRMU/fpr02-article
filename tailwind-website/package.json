@@ -1,0 +1,20 @@
+{
+  "name": "tailwind-website",
+  "version": "1.0.0",
+  "description": "A simple website styled with Tailwind CSS",
+  "main": "src/index.html",
+  "scripts": {
+    "build": "postcss src/styles/style.css -o dist/styles.css",
+    "watch": "postcss src/styles/style.css -o dist/styles.css --watch"
+  },
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "tailwindcss": "^2.2.19",
+    "postcss": "^8.4.5",
+    "autoprefixer": "^10.4.2"
+  },
+  "devDependencies": {
+    "postcss-cli": "^9.1.0"
+  }
+}

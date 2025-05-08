@@ -1,11 +1,43 @@
 * {
-background-color: blueviolet;
+    background: linear-gradient(270deg, blueviolet, aqua, pink, yellow);
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s ease infinite;
 }
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 kolommen */
+    grid-auto-rows: 200px;
+    gap: 16px;
+    max-width: 800px;
+    margin: auto;
+  }
+
+  .large-article {
+    grid-column: span 2; /* over 2 kolommen */
+    background-color: #ccc;
+  }
+
+  .small-article {
+    background-color: #eee;
+  }
 
 article {
     background-color: aqua;
-    margin: 0 auto;
-    width: 50%; 
+    width: calc(50% - 20px);
     padding: 10px;
     text-align: center;
+    box-sizing: border-box;
 }
